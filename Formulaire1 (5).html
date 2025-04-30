@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="form-page">
+    <header>
+        <h1>Inscription au Stage</h1>
+    </header>
+    <main>
+        <form method="post" action="traitement.php" class="form-container">
+            <fieldset>
+                <legend>Identité</legend>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="date_naissance">Date de naissance :</label>
+                <input type="date" id="date_naissance" name="date_naissance" required>
+            </fieldset>
+            <fieldset>
+                <legend>Informations supplémentaires</legend>
+                <label for="activite">Activité :</label>
+                <select id="activite" name="activite" required>
+                    <option value="collégien">Collégien</option>
+                    <option value="lycéen">Lycéen</option>
+                    <option value="étudiant">Étudiant</option>
+                    <option value="salarié">Salarié</option>
+                    <option value="fonctionnaire">Fonctionnaire</option>
+                    <option value="patron">Patron</option>
+                </select>
+                <label>Qualifications :</label>
+                <input type="checkbox" id="bafa" name="qualification[]" value="bafa">
+                <label for="bafa">BAFA</label>
+                <input type="checkbox" id="bafd" name="qualification[]" value="bafd">
+                <label for="bafd">BAFD</label>
+                <input type="checkbox" id="aucune" name="qualification[]" value="aucune">
+                <label for="aucune">Aucune</label>
+            </fieldset>
+            <fieldset>
+                <legend>Préférences</legend>
+                <label>Semaine choisie :</label>
+                <input type="radio" id="semaine1" name="semaine" value="1" required>
+                <label for="semaine1">1ère</label>
+                <input type="radio" id="semaine2" name="semaine" value="2">
+                <label for="semaine2">2ème</label>
+                <input type="radio" id="semaine3" name="semaine" value="3">
+                <label for="semaine3">3ème</label>
+                <label for="motivations">Vos motivations :</label>
+                <textarea id="motivations" name="motivations" rows="4" required></textarea>
+            </fieldset>
+            <button type="submit">Envoyer</button>
+            <button type="reset">Effacer</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2025 Mon Site Web. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

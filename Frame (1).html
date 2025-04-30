@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue dans la Matrix</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #ffffe0; /* Couleur de fond jaune pâle */
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 3px solid #00ff00; /* Ligne verte */
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #0000ff; /* Couleur bleue */
+            text-shadow: 1px 1px 2px #000; /* Ombre légère */
+        }
+        .frame-container {
+            display: flex;
+            height: calc(100vh - 80px); /* Hauteur totale moins l'en-tête */
+        }
+        .frame-menu {
+            width: 20%;
+            background-color: #333; /* Fond gris foncé */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            padding: 10px;
+        }
+        .frame-menu button {
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+            background: transparent;
+            color: #00ff00; /* Texte vert */
+            border: 2px solid #00ff00; /* Bordure verte */
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+        }
+        .frame-menu button:hover {
+            background-color: #00ff00;
+            color: #333; /* Texte noir */
+        }
+        .frame-content {
+            flex-grow: 1;
+            background-color: white; /* Fond blanc */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue dans la Matrix</h1>
+    </header>
+    <div class="frame-container">
+        <div class="frame-menu">
+            <!-- Boutons pour charger les formulaires -->
+            <button onclick="loadContent('Formulaire1 (5).html')">Formulaire 1</button>
+            <button onclick="loadContent('Formulaire2 (1).html')">Formulaire 2</button>
+            <button onclick="loadContent('Formulaire3 (2).html')">Formulaire 3</button>
+        </div>
+        <div class="frame-content">
+            <!-- Zone où le formulaire sera chargé -->
+            <iframe id="content-frame" src="Acceuil.html"></iframe>
+        </div>
+    </div>
+    <script>
+        function loadContent(page) {
+            // Charger la page dans l'iframe
+            const contentFrame = document.getElementById('content-frame');
+            contentFrame.src = page;
+        }
+    </script>
+</body>
+</html>
